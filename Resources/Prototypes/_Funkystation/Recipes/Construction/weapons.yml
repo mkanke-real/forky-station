@@ -14,8 +14,8 @@
 
 - type: construction
   name: improvised energy sword
-  id: Tsword
-  graph: Tsword
+  id: Tswordgraph
+  graph: Tswordgraph
   startNode: start
   targetNode: tsword
   category: construction-category-weapons

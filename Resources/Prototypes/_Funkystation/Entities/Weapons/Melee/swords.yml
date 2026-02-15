@@ -102,6 +102,6 @@
   - type: IgnitionSource
     temperature: 700
   - type: Construction
-    graph: Tsword
+    graph: Tswordgraph
     node: tsword
 
