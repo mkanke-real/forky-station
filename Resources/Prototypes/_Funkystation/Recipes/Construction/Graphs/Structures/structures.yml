@@ -1,6 +1,6 @@
 #Steel
 - type: construction
-  name: steel curb
+  name: structures-steel-curb
   id: SteelCurb
   graph: curbs
   startNode: start
@@ -13,7 +13,7 @@
     state: steel_curb
 
 - type: construction
-  name: steel curb corner
+  name: structures-steel-curb-corner
   id: SteelCurbCorner
   graph: curbs
   startNode: start
@@ -26,7 +26,7 @@
     state: steel_curb_corner
 
 - type: construction
-  name: steel curb inside corner
+  name: structures-steel-curb-inside-corner
   id: SteelCurbCornerInside
   graph: curbs
   startNode: start
@@ -39,7 +39,7 @@
     state: steel_curb_inside_corner
 
 - type: construction
-  name: steel curb Ubend
+  name: structures-steel-curb-ubend
   id: SteelCurbUbend
   graph: curbs
   startNode: start
@@ -52,7 +52,7 @@
     state: steel_curb_ubend
 
 - type: construction
-  name: steel curb square
+  name: structures-steel-curb-square
   id: SteelCurbSquare
   graph: curbs
   startNode: start
