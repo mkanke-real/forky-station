@@ -8,9 +8,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: steel_curb
 
 - type: construction
   name: structures-steel-curb-corner
@@ -21,9 +18,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: steel_curb_corner
 
 - type: construction
   name: structures-steel-curb-inside-corner
@@ -34,9 +28,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: steel_curb_inside_corner
 
 - type: construction
   name: structures-steel-curb-ubend
@@ -47,9 +38,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: steel_curb_ubend
 
 - type: construction
   name: structures-steel-curb-square
@@ -60,9 +48,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: steel_curb_square
 
 #Brass
 - type: construction
@@ -74,12 +59,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: brass_curb
 
 - type: construction
-  name: structures-brass-corner
+  name: structures-brass-curb-corner
   id: BrassCurbCorner
   graph: curbs
   startNode: start
@@ -87,12 +69,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: brass_curb_corner
 
 - type: construction
-  name: structures-brass-inside-corner
+  name: structures-brass-curb-inside-corner
   id: BrassCurbCornerInside
   graph: curbs
   startNode: start
@@ -100,12 +79,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: brass_curb_inside_corner
 
 - type: construction
-  name: structures-brass-ubend
+  name: structures-brass-curb-ubend
   id: BrassCurbUbend
   graph: curbs
   startNode: start
@@ -113,12 +89,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: brass_curb_ubend
 
 - type: construction
-  name: structures-brass-square
+  name: structures-brass-curb-square
   id: BrassCurbSquare
   graph: curbs
   startNode: start
@@ -126,9 +99,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: brass_curb_square
 
 #Gold
 - type: construction
@@ -140,9 +110,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: gold_curb
 
 - type: construction
   name: structures-gold-curb-corner
@@ -153,9 +120,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: gold_curb_corner
 
 - type: construction
   name: structures-gold-curb-inside-corner
@@ -166,12 +130,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: gold_curb_inside_corner
 
 - type: construction
-  name: structures-gold-ubend
+  name: structures-gold-curb-ubend
   id: GoldCurbUbend
   graph: curbs
   startNode: start
@@ -179,12 +140,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: gold_curb_ubend
 
 - type: construction
-  name: structures-gold-square
+  name: structures-gold-curb-square
   id: GoldCurbSquare
   graph: curbs
   startNode: start
@@ -192,9 +150,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: gold_curb_square
 
 #Hydrogen
 - type: construction
@@ -206,9 +161,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: hydrogen_curb
 
 - type: construction
   name: structures-hydrogen-curb-corner
@@ -219,9 +171,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: hydrogen_curb_corner
 
 - type: construction
   name: structures-hydrogen-curb-inside-corner
@@ -232,9 +181,6 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: hydrogen_curb_inside_corner
 
 - type: construction
   name: structures-hydrogen-curb-ubend
@@ -245,12 +191,9 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: hydrogen_curb_ubend
 
 - type: construction
-  name: structures-hydrogen-curbsquare
+  name: structures-hydrogen-curb-square
   id: HydrogenCurbSquare
   graph: curbs
   startNode: start
@@ -258,6 +201,3 @@
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
-  icon:
-    sprite: _Funkystation/Structures/curbs.rsi
-    state: hydrogen_curb_square
