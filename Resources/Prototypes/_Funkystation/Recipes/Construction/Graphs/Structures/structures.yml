@@ -66,7 +66,7 @@
 
 #Brass
 - type: construction
-  name: brass curb
+  name: structures-brass-curb
   id: BrassCurb
   graph: curbs
   startNode: start
@@ -79,7 +79,7 @@
     state: brass_curb
 
 - type: construction
-  name: brass curb corner
+  name: structures-brass-corner
   id: BrassCurbCorner
   graph: curbs
   startNode: start
@@ -92,7 +92,7 @@
     state: brass_curb_corner
 
 - type: construction
-  name: brass curb inside corner
+  name: structures-brass-inside-corner
   id: BrassCurbCornerInside
   graph: curbs
   startNode: start
@@ -105,7 +105,7 @@
     state: brass_curb_inside_corner
 
 - type: construction
-  name: brass curb Ubend
+  name: structures-brass-ubend
   id: BrassCurbUbend
   graph: curbs
   startNode: start
@@ -118,7 +118,7 @@
     state: brass_curb_ubend
 
 - type: construction
-  name: brass curb square
+  name: structures-brass-square
   id: BrassCurbSquare
   graph: curbs
   startNode: start
@@ -132,7 +132,7 @@
 
 #Gold
 - type: construction
-  name: gold curb
+  name: structures-gold-curb
   id: GoldCurb
   graph: curbs
   startNode: start
@@ -145,7 +145,7 @@
     state: gold_curb
 
 - type: construction
-  name: gold curb corner
+  name: structures-gold-curb-corner
   id: GoldCurbCorner
   graph: curbs
   startNode: start
@@ -158,7 +158,7 @@
     state: gold_curb_corner
 
 - type: construction
-  name: gold curb inside corner
+  name: structures-gold-curb-inside-corner
   id: GoldCurbCornerInside
   graph: curbs
   startNode: start
@@ -171,7 +171,7 @@
     state: gold_curb_inside_corner
 
 - type: construction
-  name: gold curb Ubend
+  name: structures-gold-ubend
   id: GoldCurbUbend
   graph: curbs
   startNode: start
@@ -184,7 +184,7 @@
     state: gold_curb_ubend
 
 - type: construction
-  name: gold curb square
+  name: structures-gold-square
   id: GoldCurbSquare
   graph: curbs
   startNode: start
@@ -198,7 +198,7 @@
 
 #Hydrogen
 - type: construction
-  name: hydrogen metal curb
+  name: structures-hydrogen-curb
   id: HydrogenCurb
   graph: curbs
   startNode: start
@@ -211,7 +211,7 @@
     state: hydrogen_curb
 
 - type: construction
-  name: hydrogen metal curb corner
+  name: structures-hydrogen-curb-corner
   id: HydrogenCurbCorner
   graph: curbs
   startNode: start
@@ -224,7 +224,7 @@
     state: hydrogen_curb_corner
 
 - type: construction
-  name: hydrogen metal curb inside corner
+  name: structures-hydrogen-curb-inside-corner
   id: HydrogenCurbCornerInside
   graph: curbs
   startNode: start
@@ -237,7 +237,7 @@
     state: hydrogen_curb_inside_corner
 
 - type: construction
-  name: hydrogen metal curb Ubend
+  name: structures-hydrogen-curb-ubend
   id: HydrogenCurbUbend
   graph: curbs
   startNode: start
@@ -250,7 +250,7 @@
     state: hydrogen_curb_ubend
 
 - type: construction
-  name: hydrogen metal curb square
+  name: structures-hydrogen-curbsquare
   id: HydrogenCurbSquare
   graph: curbs
   startNode: start

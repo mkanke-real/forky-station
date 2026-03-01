@@ -1,5 +1,5 @@
 - type: construction
-  name: mail pipe
+  name: structures-mail-pipe
   id: MailPipe
   graph: mailpipes
   startNode: start
@@ -12,7 +12,7 @@
     state: conpipe-s
 
 - type: construction
-  name: mail tagger
+  name: structures-mail-tagger
   id: MailTagger
   graph: mailpipes
   startNode: start
@@ -25,7 +25,7 @@
     state: conpipe-tagger
 
 - type: construction
-  name: mail trunk
+  name: structures-mail-trunk
   id: MailTrunk
   graph: mailpipes
   startNode: start
@@ -38,9 +38,8 @@
     state: conpipe-t
 
 - type: construction
-  name: mail router
+  name: structures-mail-router
   id: MailRouter
-  description: A three-way router. Entities with matching tags get routed to the side via configurable filters.
   graph: mailpipes
   startNode: start
   targetNode: router
@@ -52,9 +51,8 @@
     state: conpipe-j1s
 
 - type: construction
-  name: mail router flipped
+  name: structures-mail-router-flipped
   id: MailRouterFlipped
-  description: A three-way router. Entities with matching tags get routed to the side via configurable filters.
   graph: mailpipes
   startNode: start
   targetNode: routerflipped
@@ -66,9 +64,8 @@
     state: conpipe-j2s
 
 - type: construction
-  name: mail junction
+  name: structures-mail-junction
   id: MailJunction
-  description: A three-way junction. The arrow indicates where items exit.
   graph: mailpipes
   startNode: start
   targetNode: junction
@@ -80,9 +77,8 @@
     state: conpipe-j1
 
 - type: construction
-  name: mail junction flipped
+  name: structures-mail-junction-flipped
   id: MailJunctionFlipped
-  description: A three-way junction. The arrow indicates where items exit.
   graph: mailpipes
   startNode: start
   targetNode: junctionflipped
@@ -94,9 +90,8 @@
     state: conpipe-j2
 
 - type: construction
-  name: mail y-junction
+  name: structures-mail-y-junction
   id: MailYJunction
-  description: A three-way junction with another exit point.
   graph: mailpipes
   startNode: start
   targetNode: yJunction
@@ -108,9 +103,8 @@
     state: conpipe-y
 
 - type: construction
-  name: mail bend
+  name: structures-mail-bend
   id: MailBend
-  description: A tube bent at a 90 degree angle.
   graph: mailpipes
   startNode: start
   targetNode: bend
@@ -122,9 +116,8 @@
     state: conpipe-c
 
 - type: construction
-  name: mail signal router
+  name: structures-mail-signal-router
   id: MailSignalRouter
-  description: A signal-controlled three-way router.
   graph: mailpipes
   startNode: start
   targetNode: signal_router
@@ -136,9 +129,8 @@
     state: signal-router-free
 
 - type: construction
-  name: mail signal router flipped
+  name: structures-mail-signal-signal-router-flipped
   id: MailSignalRouterFlipped
-  description: A signal-controlled three-way router.
   graph: mailpipes
   startNode: start
   targetNode: signal_router_flipped
