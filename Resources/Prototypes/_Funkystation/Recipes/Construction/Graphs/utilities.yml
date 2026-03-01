@@ -1,7 +1,6 @@
 - type: construction
   name: mail pipe
   id: MailPipe
-  description: A huge pipe segment used for constructing mail systems.
   graph: mailpipes
   startNode: start
   targetNode: pipe
@@ -15,7 +14,6 @@
 - type: construction
   name: mail tagger
   id: MailTagger
-  description: A pipe that tags entities for routing.
   graph: mailpipes
   startNode: start
   targetNode: tagger
@@ -29,7 +27,6 @@
 - type: construction
   name: mail trunk
   id: MailTrunk
-  description: A pipe trunk used as an entry point for mail systems.
   graph: mailpipes
   startNode: start
   targetNode: trunk
