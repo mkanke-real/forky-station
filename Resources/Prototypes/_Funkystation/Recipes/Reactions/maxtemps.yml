@@ -1,0 +1,139 @@
+- type: reaction
+  id: PlasmaGasOff
+  minTemp: 500
+  reactants:
+    Plasma:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Plasma
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: CryptobiolinGasOff
+  minTemp: 500
+  reactants:
+    Cryptobiolin:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Oxygen
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: DyloveneGasOff
+  minTemp: 500
+  reactants:
+    Dylovene:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Nitrogen
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: DiphenhydramineGasOff
+  minTemp: 500
+  reactants:
+    Diphenhydramine:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: CarbonDioxide
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: EthylredoxrazineGasOff
+  minTemp: 500
+  reactants:
+    Ethylredoxrazine:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: CarbonDioxide
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: ArithrazineGasOff
+  minTemp: 500
+  reactants:
+    Arithrazine:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: BicaridineGasOff
+  minTemp: 500
+  reactants:
+    Bicaridine:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: CarbonDioxide
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: CryoxadoneGasOff
+  minTemp: 350
+  reactants:
+    Cryoxadone:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: DoxarubixadoneGasOff
+  minTemp: 450
+  reactants:
+    Doxarubixadone:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: DermalineGasOff
+  minTemp: 500
+  reactants:
+    Dermaline:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: CarbonDioxide
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
