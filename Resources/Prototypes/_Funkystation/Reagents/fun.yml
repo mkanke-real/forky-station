@@ -1,0 +1,41 @@
+- type: reagent
+  id: Microplastics
+  name: reagent-name-microplastics
+  group: Toxins
+  desc: reagent-desc-microplastics
+  physicalDesc: reagent-physical-desc-grainy
+  flavor: strange
+  color: "#6badce"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateHunger
+        factor: 1.5
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 1
+      - !type:SatiateHunger
+        factor: 1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Vox ]
+
+- type: reagent
+  id: Punchineline
+  name: reagent-name-punchineline
+  group: Toxins
+  desc: reagent-desc-punchineline
+  physicalDesc: reagent-physical-desc-syrupy
+  flavor: flavor-base-funny
+  color: "#ff78ca"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:GenericStatusEffect
+        key: Clumsy
+        component: Clumsy
+        type: Add
+        time: 10

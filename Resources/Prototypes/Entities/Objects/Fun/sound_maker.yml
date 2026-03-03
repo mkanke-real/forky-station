@@ -46,6 +46,11 @@
     qualities:
     - Honking
     useSound: *SoundBikeHorn
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Punchineline
+        Quantity: 20
 
 - type: entity
   parent: BaseItem

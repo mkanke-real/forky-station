@@ -637,6 +637,11 @@
           Quantity: 5
   - type: Edible
     requiresSpecialDigestion: true
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Microplastics
+        Quantity: 0.5
 
 - type: entity
   categories: [ HideSpawnMenu ]
