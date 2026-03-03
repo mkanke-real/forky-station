@@ -2,7 +2,7 @@
 
 - type: reaction
   id: AloxadoneGasOff
-  minTemp: 450
+  minTemp: 600
   reactants:
     Aloxadone:
       amount: 1
@@ -16,7 +16,7 @@
 
 - type: reaction
   id: AmbuzolGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Ambuzol:
       amount: 1
@@ -28,7 +28,7 @@
 
 - type: reaction
   id: AmbuzolPlusGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     AmbuzolPlus:
       amount: 1
@@ -40,7 +40,7 @@
 
 - type: reaction
   id: ArcryoxGasOff
-  minTemp: 373
+  minTemp: 600
   reactants:
     Arcryox:
       amount: 1
@@ -54,7 +54,7 @@
 
 - type: reaction
   id: ArithrazineGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Arithrazine:
       amount: 1
@@ -134,7 +134,7 @@
 
 - type: reaction
   id: CryoxadoneGasOff
-  minTemp: 350
+  minTemp: 373 #primarily water and is a cryo chem so makes sense to stay cold
   reactants:
     Cryoxadone:
       amount: 1
@@ -148,7 +148,7 @@
 
 - type: reaction
   id: DermalineGasOff
-  minTemp: 500
+  minTemp: 800 #Pyra is made at 540
   reactants:
     Dermaline:
       amount: 1
@@ -190,7 +190,7 @@
 
 - type: reaction
   id: DiphenhydramineGasOff
-  minTemp: 500
+  minTemp: 500 #Lots of flamable stuff in this one
   reactants:
     Diphenhydramine:
       amount: 1
@@ -218,7 +218,7 @@
 
 - type: reaction
   id: DoxarubixadoneGasOff
-  minTemp: 450
+  minTemp: 600
   reactants:
     Doxarubixadone:
       amount: 1
@@ -302,7 +302,7 @@
 
 - type: reaction
   id: HolywaterGasOff
-  minTemp: 500
+  minTemp: 373 #water steam temp IRL
   reactants:
     Holywater:
       amount: 1
@@ -344,7 +344,7 @@
 
 - type: reaction
   id: InsuzineGasOff
-  minTemp: 3000
+  minTemp: 1000
   reactants:
     Insuzine:
       amount: 1
@@ -386,7 +386,7 @@
 
 - type: reaction
   id: LacerinolGasOff
-  minTemp: 1500
+  minTemp: 600
   reactants:
     Lacerinol:
       amount: 1
@@ -397,8 +397,8 @@
     type: Pvs
 
 - type: reaction
-  id: LeporazineGasOff
-  minTemp: 500
+  id: LeporazineGasOff #Pyra is made at 540
+  minTemp: 800
   reactants:
     Leporazine:
       amount: 1
@@ -424,7 +424,7 @@
 
 - type: reaction
   id: MannitolGasOff
-  minTemp: 450
+  minTemp: 600
   reactants:
     Mannitol:
       amount: 1
@@ -488,7 +488,7 @@
 
 - type: reaction
   id: OpporozidoneGasOff
-  minTemp: 3000
+  minTemp: 1000
   reactants:
     Opporozidone:
       amount: 1
@@ -519,8 +519,6 @@
     PotassiumIodide:
       amount: 1
   effects:
-  - !type:CreateGas
-    gas: WaterVapor
   - !type:PopupMessage
     visualType: LargeCaution
     messages: [ "reagent-gas-created" ]
@@ -528,7 +526,7 @@
 
 - type: reaction
   id: PsicodineGasOff
-  minTemp: 450
+  minTemp: 600
   reactants:
     Psicodine:
       amount: 1
@@ -542,7 +540,7 @@
 
 - type: reaction
   id: PuncturaseGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Puncturase:
       amount: 1
@@ -554,7 +552,7 @@
 
 - type: reaction
   id: PulpedBananaPeelGasOff
-  minTemp: 500
+  minTemp: 1000
   reactants:
     PulpedBananaPeel:
       amount: 1
@@ -582,7 +580,7 @@
 
 - type: reaction
   id: SalineGasOff
-  minTemp: 373
+  minTemp: 373 #water steam temp IRL
   reactants:
     Saline:
       amount: 1
@@ -608,7 +606,7 @@
 
 - type: reaction
   id: SigynateGasOff
-  minTemp: 1500
+  minTemp: 600
   reactants:
     Sigynate:
       amount: 1
@@ -686,7 +684,7 @@
 
 - type: reaction
   id: WarfarinGasOff
-  minTemp: 650
+  minTemp: 600
   reactants:
     Warfarin:
       amount: 1

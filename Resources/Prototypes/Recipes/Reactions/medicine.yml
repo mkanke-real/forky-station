@@ -420,7 +420,7 @@
 - type: reaction
   id: Sigynate
   impact: Medium
-  minTemp: 370
+  minTemp: 353 #water gasses off at 373. Should leave the player a little wiggle room
   reactants:
     SodiumCarbonate:
       amount: 1
@@ -609,7 +609,7 @@
 
 - type: reaction
   id: Arcryox
-  minTemp: 370
+  minTemp: 353 #cryox gasses off at 373. Its a narrow band
   reactants:
     Lithium:
       amount: 1
@@ -623,7 +623,7 @@
 - type: reaction
   id: Necrosol
   impact: Medium
-  minTemp: 370
+  minTemp: 353 #cryox gasses off at 373. Its a narrow band
   reactants:
     Blood:
       amount: 3
