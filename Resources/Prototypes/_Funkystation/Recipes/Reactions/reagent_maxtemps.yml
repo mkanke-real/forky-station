@@ -119,20 +119,6 @@
     maxTotalIntensity: 0.5
 
 - type: reaction
-  id: CryptobiolinGasOff
-  minTemp: 500
-  reactants:
-    Cryptobiolin:
-      amount: 1
-  effects:
-  - !type:CreateGas
-    gas: Oxygen
-  - !type:PopupMessage
-    visualType: LargeCaution
-    messages: [ "reagent-gas-created" ]
-    type: Pvs
-
-- type: reaction
   id: CryoxadoneGasOff
   minTemp: 373 #primarily water and is a cryo chem so makes sense to stay cold
   reactants:
@@ -141,6 +127,20 @@
   effects:
   - !type:CreateGas
     gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: CryptobiolinGasOff
+  minTemp: 500
+  reactants:
+    Cryptobiolin:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Oxygen
   - !type:PopupMessage
     visualType: LargeCaution
     messages: [ "reagent-gas-created" ]
@@ -204,7 +204,7 @@
 
 - type: reaction
   id: DiphenylmethylamineExplosion
-  minTemp: 1500
+  minTemp: 1000
   reactants:
     Diphenylmethylamine:
       amount: 1
@@ -260,7 +260,7 @@
 
 - type: reaction
   id: EthyloxyephedrineExplosion
-  minTemp: 1500
+  minTemp: 1000 #Listed as mildly unstable
   reactants:
     Ethyloxyephedrine:
       amount: 1
@@ -288,7 +288,7 @@
 
 - type: reaction
   id: HaloperidolExplosion
-  minTemp: 400
+  minTemp: 400 #Lots of flamable stuff
   reactants:
     Haloperidol:
       amount: 1
@@ -316,7 +316,7 @@
 
 - type: reaction
   id: HyronalinGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Hyronalin:
       amount: 1
@@ -330,7 +330,7 @@
 
 - type: reaction
   id: InaprovalineGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Inaprovaline:
       amount: 1
@@ -358,7 +358,7 @@
 
 - type: reaction
   id: IpecacGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Ipecac:
       amount: 1
@@ -372,7 +372,7 @@
 
 - type: reaction
   id: KelotaneGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Kelotane:
       amount: 1
@@ -410,7 +410,7 @@
 
 - type: reaction
   id: LipozineExplosion
-  minTemp: 1500
+  minTemp: 1000 #Ethonal goes boom
   reactants:
     Lipozine:
       amount: 1
@@ -438,7 +438,7 @@
 
 - type: reaction
   id: NecrosolGasOff
-  minTemp: 450
+  minTemp: 450 #Made with cryox
   reactants:
     Necrosol:
       amount: 1
@@ -449,22 +449,8 @@
     type: Pvs
 
 - type: reaction
-  id: PhalanximineExplosion
-  minTemp: 1500
-  reactants:
-    Phalanximine:
-      amount: 1
-  effects:
-  - !type:Explosion
-    explosionType: Default # 15 damage per intensity.
-    maxIntensity: 0.25
-    intensityPerUnit: 0.1
-    intensitySlope: 0.1
-    maxTotalIntensity: 0.5
-
-- type: reaction
   id: OculineGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Oculine:
       amount: 1
@@ -476,7 +462,7 @@
 
 - type: reaction
   id: OmnizineGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Omnizine:
       amount: 1
@@ -488,7 +474,7 @@
 
 - type: reaction
   id: OpporozidoneGasOff
-  minTemp: 1000
+  minTemp: 1000 #is made at 400K
   reactants:
     Opporozidone:
       amount: 1
@@ -501,8 +487,22 @@
     type: Pvs
 
 - type: reaction
+  id: PhalanximineExplosion
+  minTemp: 1000 #Made with Ethanol
+  reactants:
+    Phalanximine:
+      amount: 1
+  effects:
+  - !type:Explosion
+    explosionType: Default # 15 damage per intensity.
+    maxIntensity: 0.25
+    intensityPerUnit: 0.1
+    intensitySlope: 0.1
+    maxTotalIntensity: 0.5
+
+- type: reaction
   id: PolypyryliumOligomersGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     PolypyryliumOligomers:
       amount: 1
@@ -540,7 +540,7 @@
 
 - type: reaction
   id: PuncturaseGasOff
-  minTemp: 600
+  minTemp: 800 #Made at 325K
   reactants:
     Puncturase:
       amount: 1
@@ -551,22 +551,8 @@
     type: Pvs
 
 - type: reaction
-  id: PulpedBananaPeelGasOff
-  minTemp: 1000
-  reactants:
-    PulpedBananaPeel:
-      amount: 1
-  effects:
-  - !type:SpawnEntity
-    entity: Ash
-  - !type:PopupMessage
-    visualType: LargeCaution
-    messages: [ "reagent-gas-created" ]
-    type: Pvs
-
-- type: reaction
   id: PyrazineGasOff
-  minTemp: 3000
+  minTemp: 3000 #Pyro chem giving it some slack
   reactants:
     Pyrazine:
       amount: 1
@@ -620,7 +606,7 @@
 
 - type: reaction
   id: StellibininGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Saline:
       amount: 1
@@ -632,7 +618,7 @@
 
 - type: reaction
   id: SynaptizineExplosion
-  minTemp: 500
+  minTemp: 600 #Lithium and water dont mix nicely IRL
   reactants:
     Synaptizine:
       amount: 1
@@ -646,7 +632,7 @@
 
 - type: reaction
   id: TranexamicAcidGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     TranexamicAcid:
       amount: 1
@@ -658,7 +644,7 @@
 
 - type: reaction
   id: TricordrazineGasOff
-  minTemp: 500
+  minTemp: 600
   reactants:
     Tricordrazine:
       amount: 1
@@ -696,17 +682,237 @@
     messages: [ "reagent-gas-created" ]
     type: Pvs
 
-#Elemental Reagents
+#Narcotic Reagents
+
+- type: reaction
+  id: DesoxyephedrineExplosion
+  minTemp: 400 #Pay attention or your meth lab will go boom
+  reactants:
+    Desoxyephedrine:
+      amount: 1
+  effects:
+  - !type:Explosion
+    explosionType: Default # 15 damage per intensity.
+    maxIntensity: 20
+    intensityPerUnit: 4
+    intensitySlope: 5
+    maxTotalIntensity: 50
+  - !type:CreateGas
+    gas: Ammonia
+
+- type: reaction
+  id: EphedrineExplosion
+  minTemp: 400 #Lot of flamable stuff
+  reactants:
+    Ephedrine:
+      amount: 1
+  effects:
+  - !type:Explosion
+    explosionType: Default # 15 damage per intensity.
+    maxIntensity: 0.25
+    intensityPerUnit: 0.1
+    intensitySlope: 0.1
+    maxTotalIntensity: 0.5
+
+- type: reaction
+  id: MuteToxinGasOff
+  minTemp: 600
+  reactants:
+    MuteToxin:
+      amount: 1
+  effects:
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: NorepinephricAcidGasOff
+  minTemp: 600
+  reactants:
+    NorepinephricAcid:
+      amount: 1
+  effects:
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: PaxGasOff
+  minTemp: 600
+  reactants:
+    Pax:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: SpaceDrugsOff
+  minTemp: 600
+  reactants:
+    SpaceDrugs:
+      amount: 1
+  effects:
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+#Toxins
+
+- type: reaction
+  id: ChloralHydrateGasOff
+  minTemp: 373 #Mostly water
+  reactants:
+    ChloralHydrate:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: HeartbreakerToxinGasOff
+  minTemp: 600
+  reactants:
+    HeartbreakerToxin:
+      amount: 1
+  effects:
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: HemorrhinolGasOff
+  minTemp: 800
+  reactants:
+    Hemorrhinol:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Plasma
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: LexorinGasOff
+  minTemp: 800
+  reactants:
+    Lexorin:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Plasma
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: LicoxideGasOff
+  minTemp: 800
+  reactants:
+    Licoxide:
+      amount: 1
+  effects:
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: LipolicideExplosion
+  minTemp: 400 #Lot of flamable stuff
+  reactants:
+    Lipolicide:
+      amount: 1
+  effects:
+  - !type:Explosion
+    explosionType: Default # 15 damage per intensity.
+    maxIntensity: 0.25
+    intensityPerUnit: 0.1
+    intensitySlope: 0.1
+    maxTotalIntensity: 0.5
+
+- type: reaction
+  id: MindbreakerToxinGasOff
+  minTemp: 500
+  reactants:
+    MindbreakerToxin:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: PolytrinicAcidGasOff
+  minTemp: 800
+  reactants:
+    PolytrinicAcid:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: Plasma
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+#Other stuff
+
+- type: reaction
+  id: AcetoneExplosion
+  minTemp: 738 #IRL temp for self ignition
+  reactants:
+    Acetone:
+      amount: 1
+  effects:
+  - !type:Explosion
+    explosionType: Default # 15 damage per intensity.
+    maxIntensity: 0.25
+    intensityPerUnit: 0.1
+    intensitySlope: 0.1
+    maxTotalIntensity: 0.5
 
 - type: reaction
   id: PlasmaGasOff
-  minTemp: 500
+  minTemp: 500 #Should be safe for most reactions but still pretty low as its a flamabale thing
   reactants:
     Plasma:
       amount: 1
   effects:
   - !type:CreateGas
     gas: Plasma
+  - !type:PopupMessage
+    visualType: LargeCaution
+    messages: [ "reagent-gas-created" ]
+    type: Pvs
+
+- type: reaction
+  id: PulpedBananaPeelGasOff
+  minTemp: 1000
+  reactants:
+    PulpedBananaPeel:
+      amount: 1
+  effects:
+  - !type:SpawnEntity
+    entity: Ash
   - !type:PopupMessage
     visualType: LargeCaution
     messages: [ "reagent-gas-created" ]
