@@ -1,4 +1,48 @@
 - type: reagent
+  id: BoogieJuice
+  name: reagent-name-boogiejuice
+  group: Toxins
+  desc: reagent-desc-boogiejuice
+  physicalDesc: reagent-physical-desc-grainy
+  flavor: strange
+  color: "#d632c4"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:Emote
+        emote: Spins
+        showInChat: true
+        probability: 0.1
+      - !type:Emote
+        emote: Flips
+        showInChat: true
+        probability: 0.1
+      - !type:Emote
+        emote: Jumps
+        showInChat: true
+        probability: 0.1
+      - !type:Emote
+        emote: ClapSingle
+        showInChat: true
+        probability: 0.1
+
+- type: reagent
+  id: Horror
+  name: reagent-name-horror
+  group: Toxins
+  desc: reagent-desc-horror
+  physicalDesc: reagent-physical-desc-grainy
+  flavor: strange
+  color: "#181414"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:Emote
+        emote: Scream
+        showInChat: true
+        probability: 0.2
+
+- type: reagent
   id: Microplastics
   name: reagent-name-microplastics
   group: Toxins
@@ -33,6 +77,7 @@
   color: "#ff78ca"
   metabolisms:
     Bloodstream:
+      metabolismRate: 0.2 #Only a small amount should be needed to last a while
       effects:
       - !type:GenericStatusEffect
         key: Clumsy
