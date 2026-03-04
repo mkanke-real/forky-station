@@ -178,6 +178,7 @@
     - Flashed
     - RadiationProtection
     - Adrenaline
+    - Clumsy #Funky Edit
   - type: Identity
   - type: IdExaminable
   - type: Internals

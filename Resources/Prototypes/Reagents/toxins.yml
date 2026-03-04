@@ -415,7 +415,14 @@
         damage:
           groups:
             Brute: 2
-      # todo: cough, sneeze
+      - !type:Emote #Funky Edit Start
+        emote: Sneeze
+        showInChat: true
+        probability: 0.07
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.02 #Funky Edit End
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition

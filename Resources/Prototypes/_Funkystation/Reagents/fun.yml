@@ -1,38 +1,39 @@
-- type: reagent
-  id: BoogieJuice
-  name: reagent-name-boogiejuice
-  group: Toxins
-  desc: reagent-desc-boogiejuice
-  physicalDesc: reagent-physical-desc-grainy
-  flavor: strange
-  color: "#d632c4"
-  metabolisms:
-    Bloodstream:
-      effects:
-      - !type:Emote
-        emote: Spins
-        showInChat: true
-        probability: 0.1
-      - !type:Emote
-        emote: Flips
-        showInChat: true
-        probability: 0.1
-      - !type:Emote
-        emote: Jumps
-        showInChat: true
-        probability: 0.1
-      - !type:Emote
-        emote: ClapSingle
-        showInChat: true
-        probability: 0.1
+#This can be uncommented out when the emotes it needs are ported
+#- type: reagent
+#  id: BoogieJuice
+#  name: reagent-name-boogiejuice
+#  group: Toxins
+#  desc: reagent-desc-boogiejuice
+#  physicalDesc: reagent-physical-desc-fizzy
+#  flavor: fizzy
+#  color: "#d632c4"
+#  metabolisms:
+#    Bloodstream:
+#      effects:
+#      - !type:Emote
+#        emote: Spins
+#        showInChat: true
+#        probability: 0.1
+#      - !type:Emote
+#        emote: Flips
+#        showInChat: true
+#        probability: 0.1
+#      - !type:Emote
+#        emote: Jumps
+#        showInChat: true
+#        probability: 0.1
+#      - !type:Emote
+#        emote: ClapSingle
+#        showInChat: true
+#        probability: 0.1
 
 - type: reagent
   id: Horror
   name: reagent-name-horror
   group: Toxins
   desc: reagent-desc-horror
-  physicalDesc: reagent-physical-desc-grainy
-  flavor: strange
+  physicalDesc: reagent-physical-desc-necrotic
+  flavor: spooky
   color: "#181414"
   metabolisms:
     Bloodstream:
@@ -77,7 +78,7 @@
   color: "#ff78ca"
   metabolisms:
     Bloodstream:
-      metabolismRate: 0.2 #Only a small amount should be needed to last a while
+      metabolismRate: 0.3 #Only a small amount should be needed to last a while
       effects:
       - !type:GenericStatusEffect
         key: Clumsy

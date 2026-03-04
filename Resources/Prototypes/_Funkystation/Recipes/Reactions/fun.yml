@@ -1,0 +1,33 @@
+#This can be uncommented out when the emotes it needs are ported
+#- type: reaction
+#  id: BoogieJuice
+#  reactants:
+#    FourteenLoko:
+#      amount: 1
+#    Ephedrine:
+#      amount: 1
+#  products:
+#    BoogieJuice: 2
+
+- type: reaction
+  id: Horror
+  reactants:
+    Laughter:
+      amount: 1
+    Blood:
+      amount: 1
+  products:
+    Horror: 2
+
+- type: reaction
+  id: MeatMonsterJuice
+  reactants:
+    UncookedAnimalProteins: #Placeholder until slop bowl PR is ported
+      amount: 40
+    Omnizine:
+      amount: 5
+    Necrosol:
+      amount: 5
+  effects:
+  - !type:SpawnEntity
+    entity: MobFleshJared
