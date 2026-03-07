@@ -1179,6 +1179,8 @@
           Quantity: 10
         - ReagentId: Vitamin
           Quantity: 4
+        - ReagentId: Pectin #Funky Edit
+          Quantity: 1
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/apple.rsi
   - type: Item
