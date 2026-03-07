@@ -1,3 +1,26 @@
+- type: reagent
+  id: Anchorite
+  name: reagent-name-anchorite
+  group: Toxins
+  desc: reagent-desc-anchorite
+  physicalDesc: reagent-physical-desc-abrasive
+  flavor: terrible
+  color: "#ff78ca"
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.3 #Only a small amount should be needed to last a while
+      effects:
+      - !type:GenericStatusEffect
+        key: Anchorable
+        component: Anchorable
+        type: Add
+        time: 2
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages: [ "reagent-popup-anchorite" ]
+        probability: 0.1
+
 #This can be uncommented out when the emotes it needs are ported
 #- type: reagent
 #  id: BoogieJuice
@@ -9,6 +32,7 @@
 #  color: "#d632c4"
 #  metabolisms:
 #    Bloodstream:
+#      metabolismRate: 0.3 #Only a small amount should be needed to last a while
 #      effects:
 #      - !type:Emote
 #        emote: Spins
@@ -26,6 +50,27 @@
 #        emote: ClapSingle
 #        showInChat: true
 #        probability: 0.1
+
+- type: reagent
+  id: Circus
+  name: reagent-name-circus
+  group: Toxins
+  desc: reagent-desc-circus
+  physicalDesc: reagent-physical-desc-pungent
+  flavor: strange
+  color: "#c98990"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:Polymorph
+        prototype: ArtifactCluwne
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Animal ]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: Circus
+          min: 50
 
 - type: reagent
   id: Horror
@@ -78,10 +123,15 @@
   color: "#ff78ca"
   metabolisms:
     Bloodstream:
-      metabolismRate: 0.3 #Only a small amount should be needed to last a while
+      metabolismRate: 0.2 #Only a small amount should be needed to last a while
       effects:
       - !type:GenericStatusEffect
         key: Clumsy
         component: Clumsy
         type: Add
-        time: 10
+        time: 2
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages: [ "reagent-popup-punchineline" ]
+        probability: 0.1
