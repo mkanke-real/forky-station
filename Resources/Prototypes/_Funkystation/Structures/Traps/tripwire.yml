@@ -11,6 +11,11 @@
     sprite: Objects/Specific/Hydroponics/banana.rsi
     heldPrefix: peel
   - type: KnockdownOnTrigger
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 15
   - type: DeviceLinkSource
     ports:
     - Trigger

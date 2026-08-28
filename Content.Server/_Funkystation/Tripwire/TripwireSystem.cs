@@ -1,10 +1,8 @@
-using Content.Shared.Armable;
-using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.StepTrigger.Systems;
 using Content.Shared.Trigger.Systems;
 using Content.Server.DeviceLinking.Systems;
 
-namespace Content.Shared._Funkystation.Tripwire;
+namespace Content.Server._Funkystation.Tripwire;
 
 public sealed partial class TripwireSystem : EntitySystem
 {
@@ -16,7 +14,7 @@ public sealed partial class TripwireSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<TripwireComponent, ComponentInit>(OnInit);
-        SubscribeLocalEvent<TripwireComponent, StepTriggeredOnEvent>(StepTriggerAttemptEvent);
+        SubscribeLocalEvent<TripwireComponent, StepTriggeredOnEvent>(HandleStepOnTriggered);
     }
 
     private void OnInit(EntityUid uid, TripwireComponent component, ComponentInit args)
@@ -24,11 +22,8 @@ public sealed partial class TripwireSystem : EntitySystem
         _link.EnsureSourcePorts(uid, component.Port);
     }
 
-    private void HandleStepTriggerAttempt(EntityUid uid, TripwireComponent component, ref StepTriggerAttemptEvent args)
+    private void HandleStepOnTriggered(EntityUid uid, TripwireComponent component, ref StepTriggeredOnEvent args)
     {
-        args.Continue = true;
-
-        if (HasComp<ArmableComponent>(uid) && TryComp<ItemToggleComponent>(uid, out var itemToggle))
-            args.Continue = itemToggle.Activated;
+        _trigger.Trigger(uid, args.Tripper, TriggerSystem.DefaultTriggerKey);
     }
 }
