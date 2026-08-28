@@ -2,7 +2,7 @@ using Content.Shared.Armable;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.StepTrigger.Systems;
 using Content.Shared.Trigger.Systems;
-using Content.Server.DeviceLinking.Components;
+using Content.Server.DeviceLinking.Systems;
 
 namespace Content.Shared._Funkystation.Tripwire;
 
@@ -23,8 +23,6 @@ public sealed partial class TripwireSystem : EntitySystem
     {
         _link.EnsureSourcePorts(uid, component.Port);
     }
-
-    private void
 
     private void HandleStepTriggerAttempt(EntityUid uid, TripwireComponent component, ref StepTriggerAttemptEvent args)
     {
