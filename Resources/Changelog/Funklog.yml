@@ -162,4 +162,13 @@
   id: 20
   time: '2026-08-28T03:08:34Z'
   url: https://github.com/funky-station/forky-station/pull/302
+- author: Orsoniks, ciaran, AraiMaia
+  changes:
+  - message: Added CPR.
+    type: Add
+  - message: Added Softcrit.
+    type: Add
+  id: 21
+  time: '2026-08-28T05:57:05Z'
+  url: https://github.com/funky-station/forky-station/pull/325
 Order: -1
