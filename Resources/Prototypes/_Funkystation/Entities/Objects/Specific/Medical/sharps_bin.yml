@@ -1,0 +1,48 @@
+- type: entity
+  id: SharpsBin
+  parent: BaseWallmount
+  name: sharps bin
+  description: Dispose of those needles in their appropriate place. Safely mounted to a wall.
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Specific/Medical/crashcart.rsi
+    state: cart
+  - type: Appearance
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 250
+        layer:
+        - TableLayer
+        mask:
+        - TableMask
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,3,4
+    whitelist:
+      tags:
+      - SharpsTrash
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+  - type: StaticPrice
+    price: 500
+  - type: DnaSubstanceTrace
+  - type: Construction
+    graph: SharpsBinGraph
+    node: bin
