@@ -14,8 +14,8 @@
   - type: Destructible
     thresholds:
     - trigger: &DamageMachineFlimsy
-      !type:DamageTrigger
-      damage: 50
+        !type:DamageTrigger
+        damage: 50
       behaviors:
       - &SoundMetalGlassBreak !type:PlaySoundBehavior
         sound:
