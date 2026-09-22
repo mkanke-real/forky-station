@@ -20,7 +20,7 @@ public sealed partial class TapeVisualsComponent : Component
     /// pixel sub-region of Sprite that's actually the tape
     /// </summary>
     [DataField, AutoNetworkedField]
-    public Box2 ContentRegion = new(0, 13, 32, 19);
+    public Box2 ContentRegion = new(0, 5, 32, 30);
 
     /// <summary>
     /// the far end of the line

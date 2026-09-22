@@ -1,0 +1,28 @@
+# tape itself
+- type: entity
+  parent: BaseWarningTape
+  id: DecorativeTapeStreamer
+  categories: [ HideSpawnMenu ]
+  name: streamers
+  description: A decorative streamer for all your party needs.
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Tools/Tape/streamers.rsi
+    state: tape
+  - type: TapeVisuals
+    sprite:
+      sprite: _Funkystation/Objects/Tools/Tape/streamers.rsi
+      state: tape
+
+# actual tape rolls
+- type: entity
+  parent: WarningTapeRollEngineering
+  id: DecorativeTapeRollStreamer
+  name: streamer roll
+  description: A roll of streamers for all your party needs.
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Tools/Tape/security.rsi
+    state: icon
+  - type: TapeRoll
+    tapePrototype: DecorativeTapeStreamer
