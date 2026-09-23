@@ -22,7 +22,7 @@
   description: A roll of streamers for all your party needs.
   components:
   - type: Sprite
-    sprite: _Funkystation/Objects/Tools/Tape/security.rsi
+    sprite: _Funkystation/Objects/Tools/Tape/streamers.rsi
     state: icon
   - type: TapeRoll
     tapePrototype: DecorativeTapeStreamer
