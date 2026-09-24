@@ -1,0 +1,80 @@
+- type: entity
+  id: VehicleEngiwagon
+  parent: BaseVehicleStrap
+  name: engiwagon
+  description: The engi's trusty steed.
+  components:
+  - type: Sprite
+    sprite: Objects/Vehicles/janicart.rsi
+    drawdepth: Mobs
+    layers:
+    - state: vehicle
+      map: ["movement"]
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: vehicle-moving
+    noMovementLayers:
+      movement:
+        state: vehicle
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Appearance
+  - type: Vehicle
+    transferDamage: false
+    canAttack: false
+  - type: VehicleHandBlocker
+  - type: GenericKeyedVehicle
+    containerId: key_slot
+    keyWhitelist:
+      tags:
+      - EngiwagonKeys
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 3.5
+    softness: 2
+    lightMask: ConeSingle
+    autoRot: true
+  - type: GravityAffected
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:ExplodeBehavior
+  - type: Strap
+    buckleOffset: "0.01,0.15"
+    modifyBuckleDrawDepth: false
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          tags:
+          - EngiwagonKeys
+        insertSound:
+          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+          params:
+            volume: -3
+  - type: ContainerContainer
+    containers:
+      key_slot: !type:ContainerSlot
+  - type: Storage
+    maxItemSize: Ginormous
+    grid:
+    - 0,0,15,10
