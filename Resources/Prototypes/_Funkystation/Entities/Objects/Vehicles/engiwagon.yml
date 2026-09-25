@@ -5,7 +5,7 @@
   description: The engi's trusty steed.
   components:
   - type: Sprite
-    sprite: Objects/Vehicles/janicart.rsi
+    sprite: _Funkystation/Objects/Vehicles/dev_truck.rsi
     drawdepth: Mobs
     layers:
     - state: vehicle
@@ -21,6 +21,22 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: "-0.49,-1,0.49,1"
+        density: 40000
+        mask:
+          - MachineMask
+        layer:
+          - MachineLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 5
+    baseSprintSpeed: 8
+    baseAcceleration: 3
+    baseFriction: 1.5
+    baseWeightlessModifier: 0
   - type: Appearance
   - type: Vehicle
     transferDamage: false
@@ -31,13 +47,6 @@
     keyWhitelist:
       tags:
       - EngiwagonKeys
-  - type: UnpoweredFlashlight
-  - type: PointLight
-    enabled: false
-    radius: 3.5
-    softness: 2
-    lightMask: ConeSingle
-    autoRot: true
   - type: GravityAffected
   - type: Destructible
     thresholds:
@@ -60,6 +69,7 @@
   - type: Strap
     buckleOffset: "0.01,0.15"
     modifyBuckleDrawDepth: false
+#inventory
   - type: ItemSlots
     slots:
       key_slot:
@@ -78,3 +88,16 @@
     maxItemSize: Ginormous
     grid:
     - 0,0,15,10
+#lights
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 7
+    softness: 2
+    lightMask: ConeSingle
+    autoRot: true
+#sound
+  - type: UseDelay
+    delay: 0.5
+  - type: EmitSoundOnUse
+    sound: Audio/Effects/Vehicle/carhorn.ogg
