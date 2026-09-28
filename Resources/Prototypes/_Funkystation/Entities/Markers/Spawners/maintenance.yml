@@ -232,3 +232,45 @@
     offset: 0
     table: !type:NestedSelector
       tableId: RandomToolbox
+
+- type: entityTable
+  id: CigPackTable
+  table: !type:GroupSelector
+    children:
+    - id: CigPackGreen
+    - id: CigPackMixed
+    - id: CigPackBlue
+    - id: CigPackRed
+    - id: CigPackBlack
+
+- type: entity
+  name: Random Cig Pack Spawner
+  id: RandomCigPackSpawner
+  parent: MarkerBase
+  suffix: 100
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Funkystation/Objects/Consumable/Smokeables/Cigarettes/Packs/blue.rsi
+      state: closed
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: CigPackTable
+
+#- type: entityTable
+#  id: MaintenanceMedicationLootCommonTable
+#  table: !type:AllSelector
+#    children:
+#    - id: ClothingHeadHatCanadaBeanie
+#      prob: 0.6
+#
+#- type: entityTable
+#  id: MaintenanceMedicationLootUncommonTable
+#  table: !type:AllSelector
+#    children:
+#    - id: ClothingHeadHatCanadaBeanie
+#      prob: 0.6
