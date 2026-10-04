@@ -21,23 +21,34 @@
   table: !type:GroupSelector
     children:
     - id: ClosetMaintenanceLockerFullRandom
-      weight: 3
+      weight: 10
     - id: ClosetMaintenanceLockerJani
     - id: ClosetMaintenanceLockerClothing
     - id: ClosetMaintenanceLockerLaundry
     - id: ClosetMaintenanceLockerServiceWorker
     - id: ClosetMaintenanceLockerPlumber
+    - id: ClosetMaintenanceLockerNerd
+    - id: ClosetMaintenanceLockerScience
+    - id: ClosetMaintenanceLockerSupply
+    - id: ClosetMaintenanceLockerMusician
+      weight: 0.7
     - id: ClosetMaintenanceLockerPrankster
+      weight: 0.5
+    - id: ClosetMaintenanceLockerChef
       weight: 0.5
     - id: ClosetMaintenanceLockerDruggy
       weight: 0.5
     - id: ClosetMaintenanceLockerElectricitan
       weight: 0.5
-    - id: ClosetMaintenanceLockerMusicianTable
-      weight: 0.5
-    - id: ClosetMaintenanceLockerEngiTable
+    - id: ClosetMaintenanceLockerEngi
+      weight: 0.3
+    - id: ClosetMaintenanceLockerMedical
       weight: 0.3
     - id: ClosetMaintenanceLockerPlushies
+      weight: 0.2
+    - id: ClosetMaintenanceLockerPoolCleaner
+      weight: 0.2
+    - id: ClosetMaintenanceLockerChemist
       weight: 0.2
     - id: ClosetMaintenanceLockerPrepper
       weight: 0.1
@@ -182,6 +193,7 @@
   table: !type:AllSelector
     children:
       - !type:AllSelector
+        prob: 0.3
         children:
         - id: ClothingUniformOveralls
         - id: ClothingHeadHatGreensoft
@@ -310,7 +322,7 @@
       amount: !type:RangeNumberSelector
         range: 0, 3
     - id: WashingMachineCircuitboard
-      prob: 0.05
+      prob: 0.1
     - !type:NestedSelector
       rolls: !type:RangeNumberSelector
         range: 1, 2
@@ -323,14 +335,6 @@
       rolls: !type:RangeNumberSelector
         range: 0, 1
       tableId: MaintenanceLockerLoot
-
-- type: entityTable
-  id: TowelTable
-  table: !type:GroupSelector
-    children:
-    - id: TowelColorWhite
-      weight: 20
-    - id: TowelColorNT
 #musician
 - type: entity
   id: ClosetMaintenanceLockerMusician
@@ -543,29 +547,296 @@
       rolls: !type:RangeNumberSelector
         range: 0, 1
       tableId: MaintenanceLockerLoot
-
 #nerd
-#pool cleaner
+- type: entity
+  id: ClosetMaintenanceLockerNerd
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Nerd
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ClosetMaintenanceLockerNerdTable
+
+- type: entityTable
+  id: ClosetMaintenanceLockerNerdTable
+  table: !type:AllSelector
+    children:
+    - id: Pen
+    - id: Blunt
+      prob: 0.3
+    - id: DrinkSpaceMountainWindBottleFull
+      amount: !type:RangeNumberSelector
+        range: 0, 1
+    - id: MysteryFigureBox
+      amount: !type:RangeNumberSelector
+        range: 1, 3
+    - !type:GroupSelector
+      children:
+      - id: ClothingEyesGlassesJamjar
+      - id: ClothingEyesGlassesGarOrange
+      - id: ClothingEyesGlassesGar
+    - !type:NestedSelector
+      tableId: MaintenanceLockerLoot
 #chemist
+- type: entity
+  id: ClosetMaintenanceLockerChemist
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Chemist
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ClosetMaintenanceLockerChemistTable
 
+- type: entityTable
+  id: ClosetMaintenanceLockerChemistTable
+  table: !type:AllSelector
+    children:
+    - id: Pen
+    - id: ClothingEyesGlassesChemical
+      prob: 0.1
+    - id: Dropper
+      prob: 0.5
+    - id: Syringe
+      prob: 0.2
+    - id: PillCanister
+      prob: 0.3
+    - id: PlasmaChemistryVial
+      prob: 0.2
+    - !type:AllSelector
+      prob: 0.3
+      children:
+      - id: ClothingOuterCoatLabChem
+      - id: ClothingShoesColorWhite
+      - id: ClothingHandsGlovesNitrile
+    - !type:GroupSelector
+      children:
+      - id: ReagentGrinderMachineCircuitboard
+      - id: ChemMasterMachineCircuitboard
+      - id: HotplateMachineCircuitboard
+      - id: ElectrolysisUnitMachineCircuitboard
+      - id: HotplateMachineCircuitboard
+    - !type:NestedSelector
+      rolls: !type:RangeNumberSelector
+        range: 0, 2
+      tableId: AllMedicineReagentBottlesTable
+    - !type:NestedSelector
+      rolls: !type:RangeNumberSelector
+        range: 1, 3
+      tableId: MaintenanceGlasswareTable
+    - !type:NestedSelector
+      rolls: !type:RangeNumberSelector
+        range: 0, 1
+      tableId: MaintenanceLockerLoot
+#science
+- type: entity
+  id: ClosetMaintenanceLockerScience
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Science
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: ClosetMaintenanceLockerScienceTable
 
+- type: entityTable
+  id: ClosetMaintenanceLockerScienceTable
+  table: !type:AllSelector
+    children:
+      - id: Pen
+      - id: ClothingHandsGlovesLatex
+      - id: MonkeyCubeBox
+        prob: 0.1
+      - id: AnomalyScanner
+        prob: 0.2
+      - id: NodeScanner
+        prob: 0.2
+      - id: ClothingOuterCoatRnd
+        prob: 0.75
+      - id: ClothingUniformJumpsuitScientist
+        prob: 0.5
+      - id: ResearchDisk
+        prob: 0.25
+        amount: !type:RangeNumberSelector
+          range: 1, 2
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: MaintenanceLockerLoot
+#supply
+- type: entity
+  id: ClosetMaintenanceLockerSupply
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Supply
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: ClosetMaintenanceLockerSupplyTable
 
+- type: entityTable
+  id: ClosetMaintenanceLockerSupplyTable
+  table: !type:AllSelector
+    children:
+      - id: Pen
+      - id: ClothingHandsGlovesFingerless
+      - id: MaterialCardboard10
+      - id: AppraisalTool
+        prob: 0.3
+      - id: ClothingHeadHatCargosoft
+        prob: 0.2
+      - !type:GroupSelector
+        prob: 0.5
+        children:
+          - id: FuClothingUniformTwopiecePantsLogiCt
+          - id: FuClothingUniformTwopieceSkirtLogiCt
+          - id: FuClothingUniformJumpsuitLogiCt
+          - id: FuClothingOuterCoatWindbreakerCt
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: MaintenanceLockerLoot
+#chef
+- type: entity
+  id: ClosetMaintenanceLockerChef
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Chef
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: ClosetMaintenanceLockerChefTable
 
+- type: entityTable
+  id: ClosetMaintenanceLockerChefTable
+  table: !type:AllSelector
+    children:
+      - id: ClothingBeltChefFilled
+        prob: 0.5
+      - id: ClothingHeadHatChef
+        prob: 0.25
+      - id: FoodKebabSkewer
+        prob: 0.25
+      - id: HandheldJuicer
+        prob: 0.25
+      - id: MortarAndPestle
+        prob: 0.25
+      - id: RollingPin
+        prob: 0.2
+      - id: KitchenKnife
+        prob: 0.1
+      - id: ButchCleaver
+        prob: 0.05
+      - id: Mousetrap
+        amount: !type:RangeNumberSelector
+          range: 1, 2
+      - !type:GroupSelector
+        children:
+          - id: ReagentContainerSugar
+          - id: ReagentContainerFlour
+          - id: DrinkMilkCarton
+          - id: FoodCheeseSlice
+          - id: FoodCondimentBottleEnzyme
+      - !type:GroupSelector
+        prob: 0.5
+        children:
+          - id: ClothingUniformJumpskirtChef
+          - id: ClothingUniformJumpsuitChef
+          - id: ClothingOuterJacketChef
+          - id: ClothingOuterApronChef
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: MaintenanceLockerLoot
+#medical
+- type: entity
+  id: ClosetMaintenanceLockerMedical
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: Medical
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: ClosetMaintenanceLockerMedicalTable
 
+- type: entityTable
+  id: ClosetMaintenanceLockerMedicalTable
+  table: !type:AllSelector
+    children:
+      - id: ClothingHandsGlovesNitrile
+      - id: Syringe
+        prob: 0.5
+      - id: BodyBagFolded
+        prob: 0.3
+      - id: ClothingHeadHatCargosoft
+        prob: 0.2
+      - !type:GroupSelector
+        children:
+          - id: Ointment
+          - id: Brutepack
+          - id: Gauze
+          - id: PillCanisterTricordrazine
+      - !type:GroupSelector
+        prob: 0.5
+        children:
+          - id: FuClothingUniformMedDress
+          - id: FuClothingUniformMedJumpsuit
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: AllMedicineReagentBottlesTable
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: MaintenanceLockerLoot
+#pool cleaner
+- type: entity
+  id: ClosetMaintenanceLockerPoolCleaner
+  parent: ClosetMaintenance
+  name: maintenance closet
+  description: It's a storage unit.
+  suffix: PoolCleaner
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: ClosetMaintenanceLockerPoolCleanerTable
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+- type: entityTable
+  id: ClosetMaintenanceLockerPoolCleanerTable
+  table: !type:AllSelector
+    children:
+      - id: BeachBall
+      - id: DrinkWaterBottleFull
+        amount: !type:RangeNumberSelector
+          range: 1, 2
+      - !type:AllSelector
+        prob: 0.5
+        children:
+          - id: BaseBallBat
+          - id: FoodWatermelon
+      - !type:NestedSelector
+        rolls: 2
+        tableId: WaterGunTable
+      - !type:NestedSelector
+        tableId: TowelTable
+      - !type:NestedSelector
+        rolls: !type:RangeNumberSelector
+          range: 0, 1
+        tableId: MaintenanceLockerLoot
 #prepper
 - type: entity
   id: ClosetMaintenanceLockerPrepper
